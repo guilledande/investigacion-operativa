@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investigación Operativa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="layout-app">
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-bar"></span>
+        <div>
+          <div class="brand-title">Inv. Operativa</div>
+          <div class="brand-sub">APUNTES Y EJERCICIOS</div>
+        </div>
+      </div>
+
+      <button class="nav-item active" data-vista="inicio">Inicio</button>
+
+      <div class="nav-seccion">UNIDADES</div>
+      <button class="nav-item" data-vista="u1">U1 · Introducción</button>
+      <button class="nav-item" data-vista="u2">U2 · Programación Lineal</button>
+      <button class="nav-item" data-vista="u3">U3 · Transporte y Stock</button>
+      <button class="nav-item" data-vista="u4">U4 · Teoría de Colas</button>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+      <!-- PANTALLA INICIO / BIENVENIDA -->
+      <section id="vista-inicio" class="vista-panel active">
+        <div class="topbar">
+          <div>
+            <h1>Bienvenido</h1>
+            <p class="topbar-sub">Investigación Operativa · Unidades y resoluciones en Excel</p>
+          </div>
+          <span class="topbar-nota">4 unidades · 20 ejercicios</span>
+        </div>
+
+        <div class="bienvenida-box">
+          <p>Este espacio reúne el desarrollo de las unidades de la materia y las resoluciones en Excel correspondientes a <strong>10 ejercicios de la Unidad 2</strong> y <strong>10 ejercicios de la Unidad 3</strong>. Seleccioná cualquiera de las tarjetas o el menú lateral para abrir su contenido.</p>
+        </div>
+
+        <div class="grid-modulos">
+          <button class="modulo-card" data-ir="u1">
+            <div class="modulo-top">
+              <span class="badge-codigo">U1</span>
+              <span class="flecha">↗</span>
+            </div>
+            <div class="modulo-titulo">Introducción a la IO</div>
+            <div class="modulo-meta">Modelización y decisiones</div>
+          </button>
+
+          <button class="modulo-card" data-ir="u2">
+            <div class="modulo-top">
+              <span class="badge-codigo">U2</span>
+              <span class="flecha">↗</span>
+            </div>
+            <div class="modulo-titulo">Programación Lineal</div>
+            <div class="modulo-meta">10 ejercicios en Excel</div>
+          </button>
+
+          <button class="modulo-card" data-ir="u3">
+            <div class="modulo-top">
+              <span class="badge-codigo">U3</span>
+              <span class="flecha">↗</span>
+            </div>
+            <div class="modulo-titulo">Transporte y Stock</div>
+            <div class="modulo-meta">10 ejercicios en Excel</div>
+          </button>
+
+          <button class="modulo-card" data-ir="u4">
+            <div class="modulo-top">
+              <span class="badge-codigo">U4</span>
+              <span class="flecha">↗</span>
+            </div>
+            <div class="modulo-titulo">Teoría de Colas</div>
+            <div class="modulo-meta">Modelos y sistemas</div>
+          </button>
+        </div>
+      </section>
+
+      <!-- UNIDAD 1 -->
+      <section id="vista-u1" class="vista-panel">
+        <div class="topbar">
+          <div>
+            <h1>Unidad 1: Introducción a la Investigación Operativa</h1>
+            <p class="topbar-sub">Conceptos básicos, evolución, metodología y tipos de modelos</p>
+          </div>
+          <button class="btn-volver" data-ir="inicio">← Inicio</button>
+        </div>
+
+        <article class="apunte-card">
+          <p>La Investigación Operativa aplica métodos matemáticos y análisis de datos para respaldar decisiones frente a problemas complejos con recursos limitados. Nació formalmente en Inglaterra durante la Segunda Guerra Mundial (1939-1945) para resolver cuestiones como la ubicación de radares, la organización de convoyes y la logística militar. Luego se expandió a la industria en los años 50-60, incorporó herramientas computacionales en los 70-80 y hoy se integra con sistemas de información, Big Data, optimización en tiempo real e inteligencia artificial.</p>
+
+          <h3>Metodología y formulación de modelos</h3>
+          <p>Un modelo matemático representa de forma simplificada una situación real mediante variables de decisión (continuas o binarias), una función objetivo (maximizar ganancias o rendimiento; minimizar costos o tiempos) y restricciones (presupuesto, capacidad, horas o disponibilidad). El proceso habitual comprende definir el problema, formular el modelo, obtener los datos, resolverlo, validar sus resultados y ajustes, implementarlo y mantenerlo actualizado.</p>
+
+          <h3>Tipos de modelos</h3>
+          <ul class="lista-simple">
+            <li><strong>Determinísticos:</strong> todos los parámetros se conocen con certeza; ante iguales entradas, siempre se obtiene el mismo resultado (por ejemplo, asignación de memoria fija o latencias de red conocidas).</li>
+            <li><strong>Estocásticos:</strong> incluyen incertidumbre y distribuciones de probabilidad, analizando resultados en términos de promedios, probabilidades o riesgos (por ejemplo, llegada de peticiones web o fallas de hardware).</li>
+            <li><strong>Estáticos:</strong> analizan un único período o instante sin evolución temporal.</li>
+            <li><strong>Dinámicos:</strong> consideran múltiples períodos encadenados donde las decisiones de un momento afectan estados o costos posteriores (por ejemplo, planificación de inventarios o capacidad de servidores en el tiempo).</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- UNIDAD 2 -->
+      <section id="vista-u2" class="vista-panel">
+        <div class="topbar">
+          <div>
+            <h1>Unidad 2: Programación Lineal</h1>
+            <p class="topbar-sub">Formulación, métodos de solución, sensibilidad, dualidad y aplicaciones</p>
+          </div>
+          <button class="btn-volver" data-ir="inicio">← Inicio</button>
+        </div>
+
+        <article class="apunte-card">
+          <p>La Programación Lineal modela problemas donde tanto la función objetivo como las restricciones son lineales respecto de las variables de decisión, junto con las condiciones de no negatividad. Para problemas de dos variables se utiliza el método gráfico (trazando rectas, delimitando la región factible y evaluando los vértices), mientras que para mayor cantidad de variables se aplica el método simplex o herramientas como Excel Solver.</p>
+
+          <h3>Sensibilidad, dualidad y aplicaciones en informática</h3>
+          <p>El análisis de sensibilidad evalúa cómo cambia la solución óptima ante modificaciones en los recursos disponibles o en los coeficientes de la función objetivo, y la dualidad aporta el valor marginal de cada recurso escaso. En sistemas informáticos se aplica en la asignación de memoria, CPU o ancho de banda, la planificación de tareas en servidores y la distribución de tráfico o carga entre centros de datos.</p>
+        </article>
+
+        <article class="apunte-card">
+          <h2>Ejercicios resueltos en Excel — Unidad 2 (10 ejercicios)</h2>
+          <p class="texto-ayuda">Seleccioná un ejercicio para ver su imagen de Excel o cargarla desde tu computadora.</p>
+          <div id="selector-u2" class="grid-ejercicios"></div>
+          <div id="visor-u2" class="visor-ejercicio"></div>
+        </article>
+      </section>
+
+      <!-- UNIDAD 3 -->
+      <section id="vista-u3" class="vista-panel">
+        <div class="topbar">
+          <div>
+            <h1>Unidad 3: Problema del Transporte y Modelos de Stock</h1>
+            <p class="topbar-sub">Asignación de rutas, métodos iniciales, EOQ, variantes y gestión de inventario</p>
+          </div>
+          <button class="btn-volver" data-ir="inicio">← Inicio</button>
+        </div>
+
+        <article class="apunte-card">
+          <p>El problema del transporte consiste en enviar unidades desde orígenes con oferta definida hacia destinos con demanda requerida minimizando el costo total y respetando restricciones operativas. Para obtener una solución inicial se emplean la esquina noroeste, el costo mínimo y el método de Vogel (basado en penalizaciones por fila y columna).</p>
+
+          <h3>Modelos de inventario (Stock)</h3>
+          <p>Los modelos de stock determinan cuánto pedir y cuándo hacerlo equilibrando costos de pedido (S), almacenamiento (H), unitarios (C) y faltantes (B), considerando la demanda (D) y el tiempo de entrega o lead time (L). Incluyen el modelo determinista de lote económico (EOQ) y su punto de reorden, variantes con faltantes permitidos o descuentos por cantidad, modelos estocásticos y aplicaciones en gestión de recursos de TI y almacenamiento.</p>
+        </article>
+
+        <article class="apunte-card">
+          <h2>Ejercicios resueltos en Excel — Unidad 3 (10 ejercicios)</h2>
+          <p class="texto-ayuda">Seleccioná un ejercicio para ver su imagen de Excel o cargarla desde tu computadora.</p>
+          <div id="selector-u3" class="grid-ejercicios"></div>
+          <div id="visor-u3" class="visor-ejercicio"></div>
+        </article>
+      </section>
+
+      <!-- UNIDAD 4 -->
+      <section id="vista-u4" class="vista-panel">
+        <div class="topbar">
+          <div>
+            <h1>Unidad 4: Teoría de Colas y Aplicaciones en Sistemas Informáticos</h1>
+            <p class="topbar-sub">Estructura, notación de Kendall, modelos markovianos, métricas y aplicaciones</p>
+          </div>
+          <button class="btn-volver" data-ir="inicio">← Inicio</button>
+        </div>
+
+        <article class="apunte-card">
+          <p>La Teoría de Colas estudia matemáticamente las líneas de espera para equilibrar el tiempo de respuesta del sistema con el costo de los servidores. Un sistema se compone de fuente de entrada, proceso de llegada, cola (capacidad y disciplina como FIFO) y mecanismo de servicio, y se describe mediante la notación de Kendall (A/B/c/K/N/D).</p>
+
+          <h3>Modelos markovianos, métricas y sistemas informáticos</h3>
+          <p>Comprende modelos como M/M/1, M/M/s y M/M/1/K, junto con medidas de desempeño como la utilización del servidor (&rho;), la longitud promedio de cola (Lq) y el tiempo promedio en el sistema (W). En informática se aplica a planificación de procesos en CPU, redes de comunicaciones y tráfico de datos, diseño de centros de datos y sistemas distribuidos, y simulación de colas.</p>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
